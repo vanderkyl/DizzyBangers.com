@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dizzy Bangers</title>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Website for the Dizzy Bangers">
+    <meta name="keywords" content="dizzy bangers,the dizzy bangers,dizzy bangers band,band,rock band,music,dizzy,bangers,rock music,bands">
+    <meta name="author" content="Kyle Vanderhoof">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: Change to relevant favicon "logo" -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Optional theme-->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-theme-3.3.7.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" />
+    <!-- App Styling -->
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/navbar.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+
+    <!-- Dependencies - Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="../js/dependencies/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="../js/dependencies/bootstrap/bootstrap-3.3.7.min.js" type="text/javascript"></script>
+    <script src="../js/dependencies/angular/angular-1.5.8.min.js" type="text/javascript"></script>
+    <script src="../js/dependencies/angular/angular-route-1.5.8.min.js" type="text/javascript"></script>
+    <script src="../js/dependencies/angular/angular-mocks-1.5.8.js" type="text/javascript"></script>
+    <script src="../js/dependencies/angular/angular-resource-1.5.8.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script data-require="angular-ui-bootstrap@0.3.0" data-semver="0.3.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.min.js"></script>
+
+    <script src="js/managers/webTools.js" type="text/javascript"></script>
+  </head>
+  <body ng-app="myApp">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0"></script>
+    <!-- Start of NavBar -->
+    <header id="header" role="banner">
+      <div id="mainNavWrapper" class="nav-wrapper desktop-nav-wrapper show-on-scroll" style="text-align: center">
+        <button type="button" class="navbar-toggle navbar-button" onclick="openNav();">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navLogo" class="col-xs-12">
+          <a href="/#/" ><img width="250px" src="img/DBHeader-2.png" alt="Dizzy Bangers Official Website"></a>
+        </div>
+        <div id="mobileNavWrapper">
+          <div class="closeNavButton" onclick="closeNav()">&times;</div>
+          <div class="col-xs-12" style="margin-top: 50px">
+            <div class="col-xs-12 navButton" style="text-align: center">
+              <a href="javascript:;" onclick="closeNav(); navigateToURL('/#/'); scrollToElementById('news')">NEWS</a>
+            </div>
+            <div class="col-xs-12 navButton" style="text-align: center">
+              <a href="javascript:;" onclick="closeNav(); navigateToURL('/#/'); scrollToElementById('tour')">TOUR</a>
+            </div>
+            <div class="col-xs-12 navButton" style="text-align: center">
+              <a href="javascript:;" onclick="closeNav(); navigateToURL('/#/'); scrollToElementById('music')">MUSIC</a>
+            </div>
+            <div class="col-xs-12 navButton" style="text-align: center">
+              <a href="javascript:;" onclick="closeNav(); navigateToURL('/#/'); scrollToElementById('band')">BAND</a>
+            </div>
+            <div class="col-xs-12 navButton" style="text-align: center">
+              <a href="/#/socials" onclick="closeNav(); navigateToURL('/#/socials')">SOCIALS</a>
+            </div>
+          </div>
+
+        </div>
+        <div id="navWrapper">
+          <div class="col-xs-2 navButton" style="text-align: right">
+            <a href="/#/">HOME</a>
+          </div>
+          <div class="col-xs-1 navButton" style="text-align: center">
+            <a href="javascript:;" onclick="navigateToURL('/#/'); scrollToElementById('news')">NEWS</a>
+          </div>
+          <div class="col-xs-1 navButton" style="text-align: center">
+            <a href="javascript:;" onclick="navigateToURL('/#/'); scrollToElementById('tour')">TOUR</a>
+          </div>
+          <div class="col-xs-4 navLogo">
+            <a href="/#/"><img width="250px" src="img/DBHeader-2.png" alt="Dizzy Bangers Official Website"></a>
+          </div>
+          <div class="col-xs-1 navButton" style="text-align: center">
+            <a href="javascript:;" onclick="navigateToURL('/#/'); scrollToElementById('music')">MUSIC</a>
+          </div>
+          <div class="col-xs-1 navButton" style="text-align: center">
+            <a href="javascript:;" onclick="navigateToURL('/#/'); scrollToElementById('band')">BAND</a>
+          </div>
+          <div class="col-xs-2 navButton" style="text-align: left">
+            <a href="/#/socials" onclick="scrollToElementById('/#/socials')">SOCIALS</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- End of Nav -->
+
+
+    <!-- Container of Angular views -->
+    <div id="appContainer" class="appContainer" ng-view></div>
+
+    <!-- Start of Footer -->
+    <footer id="footer" >
+      <div class="socialButtons" style="margin-top: 60px; font-size: 15px !important;">
+        <span class="socialButton">
+          <a href="https://www.facebook.com/pg/dizzybangers" class="fab fa-facebook"></a>
+        </span>
+        <span class="socialButton">
+          <a href="https://www.instagram.com/dizzybangers/" class="fab fa-instagram"></a>
+        </span>
+        <span class="socialButton">
+          <a href="https://open.spotify.com/artist/2bMWz8xtzd55xovCFIePcA" class="fab fa-spotify"></a>
+        </span>
+        <span class="socialButton">
+          <a href="https://www.youtube.com/channel/UC9d5cuWr__wQCUNJyLvsmZg" class="fab fa-youtube"></a>
+        </span>
+        <span class="socialButton">
+          <a href="mailto:dizzybangers@gmail.com" class="fa fa-envelope"></a>
+        </span>
+      </div>
+
+      <div style="color: #FFF; text-align: center">Booking: <a href="mailto:dizzybangers@gmail.com">dizzybangers@gmail.com</a></div>
+    </footer>
+    <!-- End of Footer -->
+
+
+    <!-- Managers - JS -->
+    <script src="js/managers/app.js" type="text/javascript"></script>
+
+    <!-- Controllers - JS -->
+    <script src="js/controllers/mainController.js" type="text/javascript"></script>
+    <script src="js/controllers/socialsController.js" type="text/javascript"></script>
+    <script src="js/controllers/newsController.js" type="text/javascript"></script>
+
+    <script src="js/directives/modals.js" type="text/javascript"></script>
+
+  </body>
+</html>
