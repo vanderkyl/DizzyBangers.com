@@ -12,7 +12,6 @@
 }
 
 #mobileNavWrapper {
-
   height: 100%;
   width: 0;
   position: fixed;
@@ -22,14 +21,13 @@
   overflow-x: hidden;
   transition: 0.5s;
   background: rgba(0,0,0,.97);
-
 }
 
 .navbar-button {
   z-index: 1000;
   float: left;
-  margin-top: 18px;
-  margin-left: 7px;
+  margin-top: 33px;
+  margin-left: 12px;
 }
 
 .nav-header {
@@ -38,32 +36,53 @@
   width: 100%;
 }
 
+.nav-dropdown {
+  background: #00000099;
+  text-align: center;
+  right: 45px;
+  padding: 10px;
+  border: 1px solid #458396;
+}
+
+.nav-dropdown a {
+  font-size: 15px !important;
+  border: 1px solid #458396;
+  padding: 10px !important;
+}
+
 #navLogo {
   display: none;
   position: absolute;
-  top: -10px;
+  top: 10px;
+  height: 100px;
 }
 
-.navLogo {
-  margin-top: -10px;
+.navLogo img {
+  max-width: 300px;
+  height: 100px;
 }
 
 .navButton {
-  padding-top: 25px;
+  padding-top: 38px;
 }
 
 .navButton a {
-  color: #cacaca !important;
-  font-size: 15px;
+  color: #ffffff !important;
+  font-size: 20px;
   padding: 5px;
+  font-family: phosphate;
+}
+
+.navButton i {
+  font-size: 14px;
 }
 
 .navButton a:hover {
-  color: white !important;
+  color: #60b1cc !important;
   text-decoration: none;
   border-radius: 20%;
   border: 1px solid #cacaca;
-  transition: all 1s ease;
+  transition: all .5s ease;
 }
 
 .closeNavButton {

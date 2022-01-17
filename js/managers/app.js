@@ -19,8 +19,11 @@ app.config(function ($routeProvider) {
     controller: 'newsController',
     templateUrl: 'views/news.html'
   })
+  .when('/photos', {
+    controller: 'photosController',
+    templateUrl: 'views/photos.html'
+  })
   .otherwise({
     redirectTo: '/'
   });
 });
-

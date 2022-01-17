@@ -10,3 +10,4 @@ function($scope, $http) {
 
 }]);
 // End of newsController scope
+scrollToTop();
