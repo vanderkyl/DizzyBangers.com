@@ -18,6 +18,8 @@ function($scope, $http) {
   $scope.playlists = [];
   $scope.playlistName = "";
 
+
+
   // -- MAIN METHODS -- // ----------------------------------------
 
 
@@ -27,3 +29,4 @@ function($scope, $http) {
 
 }]);
 // End of mainController scope
+scrollToTop();
