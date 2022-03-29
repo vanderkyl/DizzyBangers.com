@@ -80,7 +80,14 @@
 .navButton a:hover {
   color: #fe2c0e !important;
   text-decoration: none;
-  border-radius: 20%;
+  padding: 20px;
+  border: 1px solid #cacaca;
+  transition: all .5s ease;
+}
+
+.navLogo img:hover {
+  color: #fe2c0e !important;
+  text-decoration: none;
   border: 1px solid #cacaca;
   transition: all .5s ease;
 }
