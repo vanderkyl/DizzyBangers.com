@@ -41,12 +41,12 @@
   text-align: center;
   right: 45px;
   padding: 10px;
-  border: 1px solid #458396;
+  border: 1px solid #fe2c0e;
 }
 
 .nav-dropdown a {
   font-size: 15px !important;
-  border: 1px solid #458396;
+  border: 1px solid #fe2c0e;
   padding: 10px !important;
 }
 
@@ -58,19 +58,19 @@
 }
 
 .navLogo img {
-  max-width: 300px;
-  height: 100px;
+  width: 200px;
+  height: auto;
 }
 
 .navButton {
-  padding-top: 38px;
+  padding-top: 45px;
 }
 
 .navButton a {
   color: #ffffff !important;
   font-size: 20px;
   padding: 5px;
-  font-family: phosphate;
+  font-family: Trebuchet MS;
 }
 
 .navButton i {
@@ -78,7 +78,7 @@
 }
 
 .navButton a:hover {
-  color: #60b1cc !important;
+  color: #fe2c0e !important;
   text-decoration: none;
   border-radius: 20%;
   border: 1px solid #cacaca;
