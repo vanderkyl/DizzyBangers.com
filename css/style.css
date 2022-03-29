@@ -50,20 +50,17 @@ header {
       padding-top: 100px;
     }
     .carousel-control.right {
-      right: 0;
+      right: 0 !important;
     }
     .carousel-control.left {
-      left: 0;
+      left: 0 !important;
+    }
+    .carousel-indicators {
+      bottom: -15px;
     }
 }
 
-.carousel-control.right {
-  right: -40px;
-}
 
-.carousel-control.left {
-  left: -40px;
-}
 
 #myCarousel {
   overflow-x: hidden;
@@ -245,6 +242,19 @@ header {
     background: #00d000;
     border-radius: 20%;
     border: 1px solid #00d000;
+    transition: all .7s ease;
+}
+
+.fa-squarespace {
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+.fa-squarespace:hover {
+    color: white;
+    background: #008dd0;
+    border-radius: 20%;
+    border: 1px solid #008dd0;
     transition: all .7s ease;
 }
 
