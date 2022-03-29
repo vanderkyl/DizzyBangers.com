@@ -24,7 +24,7 @@ header {
     width: 100%;
     z-index: 9999;
     border-bottom: 1px solid #ddd;
-
+    transition: top 0.7s;
 }
 
 #appContainer {
@@ -49,6 +49,24 @@ header {
     #appContainer {
       padding-top: 100px;
     }
+    .carousel-control.right {
+      right: 0;
+    }
+    .carousel-control.left {
+      left: 0;
+    }
+}
+
+.carousel-control.right {
+  right: -40px;
+}
+
+.carousel-control.left {
+  left: -40px;
+}
+
+#myCarousel {
+  overflow-x: hidden;
 }
 
 .listenButton {
