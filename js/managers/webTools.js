@@ -77,7 +77,7 @@ function scrollToElementById(id) {
 $.fn.scrollView = function () {
     return this.each(function () {
         $('html, body').animate({
-            scrollTop: $(this).offset().top - 70
+            scrollTop: $(this).offset().top - 90
         }, 1000);
     });
 }
